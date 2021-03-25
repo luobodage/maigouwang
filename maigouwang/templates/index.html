@@ -1,0 +1,674 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Generator" content="EditPlus®">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <link href="/static/css/public.css" rel="stylesheet" type="text/css"/>
+    <link href="/static/css/jianlisw.css" rel="stylesheet" type="text/css"/>
+    <title>卖狗网数据分析系统</title>
+</head>
+<body>
+<!-- banner start -->
+<div class="caption-title">
+    <i class="fl"><img src="/static/images/title-left.png"></i>
+    <span class="biaoti fl">卖狗网数据分析系统</span>
+    <i class="fr"><img src="/static/images/title-right.png"></i>
+</div>
+<!-- 内容正文 -->
+<div class="zhenwen">
+    <div class="left_zs fl">
+        <!-- 系统概览 -->
+        <div class="data-box1 left_tb fl">
+            <i class="topL"></i>
+            <i class="topR"></i>
+            <i class="bottomL"></i>
+            <i class="bottomR"></i>
+            <div class="data-title">
+                <b class="data-title-left fl">[</b>
+                <span>系统概览</span>
+                <b class="data-title-right fr">]</b>
+            </div>
+            <!-- 项目概览-->
+            <div class="xmglan">
+                <ul class="xmgl_heard">
+                    <li>当前</li>
+                    <li class="hove">历史</li>
+                </ul>
+                <div id="xmgl_cen">
+                    <div class="xmgl_tb">
+                        <ul class="xm_cszs">
+                            <li>数据（条）:<span>{{ data_quantity }}</span>个</li>
+                            <li> 宠物狗品类：<span>{{ dog_breed_quantity }}</span>种</li>
+                            <li>
+
+
+                                <p>{{ dog_breed_dict.dog_breed.0 }}
+                                    <span>{{ dog_breed_dict.count.0 }}</span><cite>条</cite></p>
+                                <p>{{ dog_breed_dict.dog_breed.1 }}
+                                    <span>{{ dog_breed_dict.count.1 }}</span><cite>条</cite></p>
+                                <p>{{ dog_breed_dict.dog_breed.2 }}
+                                    <span>{{ dog_breed_dict.count.2 }}</span><cite>条</cite></p>
+                                <p>{{ dog_breed_dict.dog_breed.3 }}
+                                    <span>{{ dog_breed_dict.count.3 }}</span><cite>条</cite></p>
+                                <p>{{ dog_breed_dict.dog_breed.4 }}
+                                    <span>{{ dog_breed_dict.count.4 }}</span><cite>条</cite></p>
+                                <p>{{ dog_breed_dict.dog_breed.5 }}
+                                    <span>{{ dog_breed_dict.count.5 }}</span><cite>条</cite></p>
+
+
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="xmgl_tb none">
+                        <ul class="xm_cszs">
+                            <li>数据（条）:<span>{{ data_quantity }}</span>个</li>
+                            <li> 宠物狗品类：<span>{{ dog_breed_quantity }}</span>种</li>
+                            <li>
+
+
+                                <p>{{ dog_breed_dict.dog_breed.0 }}
+                                    <span>{{ dog_breed_dict.count.0 }}</span><cite>条</cite></p>
+                                <p>{{ dog_breed_dict.dog_breed.1 }}
+                                    <span>{{ dog_breed_dict.count.1 }}</span><cite>条</cite></p>
+                                <p>{{ dog_breed_dict.dog_breed.2 }}
+                                    <span>{{ dog_breed_dict.count.2 }}</span><cite>条</cite></p>
+                                <p>{{ dog_breed_dict.dog_breed.3 }}
+                                    <span>{{ dog_breed_dict.count.3 }}</span><cite>条</cite></p>
+                                <p>{{ dog_breed_dict.dog_breed.4 }}
+                                    <span>{{ dog_breed_dict.count.4 }}</span><cite>条</cite></p>
+                                <p>{{ dog_breed_dict.dog_breed.5 }}
+                                    <span>{{ dog_breed_dict.count.5 }}</span><cite>条</cite></p>
+
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 项目人员信息状态 -->
+        <div class="data-box1 left_tb fl mtop40">
+            <i class="topL"></i>
+            <i class="topR"></i>
+            <i class="bottomL"></i>
+            <i class="bottomR"></i>
+            <div class="data-title">
+                <b class="data-title-left fl">[</b>
+                <span>城市占比以及品种占比</span>
+                <b class="data-title-right fr">]</b>
+            </div>
+            <!-- 项目人员信息状态-->
+            <div class="xmglan">
+                <div id="lytj" class="lytj"></div>
+
+                <div class="wgrytj">
+                    <span class="wgrytj_bt">城市分布统计</span>
+                    <div class="wgrytj_tb">
+                        <div id="gztj" style="height:163px"></div>
+                    </div>
+                </div>
+
+                <div class="wgrytj">
+                    <span class="wgrytj_bt">主要品种分类</span>
+                    <div class="wgrytj_tb">
+                        <div id="xcrytj" style="height:163px"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!--仪表盘等展示-->
+    <div class="center_zs fl">
+        <div class="data-box1 box1-back">
+            <i class="topL"></i>
+            <i class="topR"></i>
+            <i class="bottomL"></i>
+            <i class="bottomR"></i>
+            <div class="data-title">
+                <b class="data-title-left">[</b>
+                <span >平台销售冠军</span>
+
+                <b class="data-title-right">]</b>
+                <br>
+                 <br> <br>
+            <img src="/static/images/gougou.jpg" style="width: 500px;height: 600px;margin-left: -160px">
+            </div>
+
+        </div>
+    </div>
+    <!--右侧图表展示 -->
+    <div class="right_zs fl">
+
+        <div class="data-box1 right_tb ">
+            <i class="topL"></i>
+            <i class="topR"></i>
+            <i class="bottomL"></i>
+            <i class="bottomR"></i>
+            <div class="data-title">
+                <b class="data-title-left">[</b>
+                <span>平均年龄分布</span>
+                <b class="data-title-right">]</b>
+            </div>
+            <!--巡检风险状态-->
+            <div class="ryclts">
+                <div id="xjfxzt" style="height:300px"></div>
+            </div>
+        </div>
+
+        <!-- 风险变化趋势 -->
+        <div class="data-box1 right_tb mtop40">
+            <i class="topL"></i>
+            <i class="topR"></i>
+            <i class="bottomL"></i>
+            <i class="bottomR"></i>
+            <div class="data-title">
+                <b class="data-title-left">[</b>
+                <span>价格趋势</span>
+                <b class="data-title-right">]</b>
+            </div>
+            <!--问题等级-->
+            <div class="ryclts">
+                <div class="clearfix">
+                    <div id="fxbhqs" style="height:300px"></div>
+                </div>
+                <div class="wgrytj">
+                    <div class="wenti_dj">
+                        <div id="wentidj" style="height:100px"></div>
+                    </div>
+                    <div class="wenti_bg">
+                        <table width="200" border="1">
+                            <tr>
+                                <td>指标</td>
+                                <td>占有量</td>
+                                <td>平均价值</td>
+                                <td>最高价值</td>
+                            </tr>
+                            <tr>
+                                <td>{{ dog_breed_dict.dog_breed.2 }}</td>
+                                <td class="green">{{ dog_breed_dict.count.0 }}</td>
+                                <td class="orange">2158</td>
+                                <td class="green">5000</td>
+                            </tr>
+                            <tr>
+                                <td>{{ dog_breed_dict.dog_breed.1 }}</td>
+                                <td class="green">{{ dog_breed_dict.count.1 }}</td>
+                                <td class="orange">1090</td>
+                                <td class="green">1300</td>
+                            </tr>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="h30 clearfix"></div>
+</body>
+<script src="/static/js/jquery.min.js"></script>
+<script src="/static/js/echarts.min.js"></script>
+<script>
+    /*#################    项目人员信息状态  #####################*/
+    var dom = document.getElementById("lytj");
+    var myChart = echarts.init(dom);
+    var app = {};
+    option = null;
+    app.title = '环形图';
+
+    option = {
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b}: {c} ({d}%)"
+        },
+        legend: {
+            orient: 'vertical',
+            x: 'left',
+            data: []
+        },
+        series: [
+            {
+                name: '是否打疫苗',
+                type: 'pie',
+                radius: ['50%', '70%'],
+                avoidLabelOverlap: false,
+                label: {
+                    normal: {
+                        show: true,
+                        position: 'inside',
+                        formatter: '{d}%',//模板变量有 {a}、{b}、{c}、{d}，分别表示系列名，数据名，数据值，百分比。{d}数据会根据value值计算百分比
+
+                        textStyle: {
+                            align: 'center',
+                            baseline: 'middle',
+                            fontFamily: '微软雅黑',
+                            fontSize: 12,
+                            fontWeight: 'bolder'
+                        }
+
+                    },
+                    emphasis: {
+                        show: true,
+                        textStyle: {
+                            fontSize: '12',
+                            fontWeight: 'bold'
+                        }
+                    }
+                },
+                labelLine: {
+                    normal: {
+                        show: true,
+                        position: 'inside',
+                        formatter: '{d}%',//模板变量有 {a}、{b}、{c}、{d}，分别表示系列名，数据名，数据值，百分比。{d}数据会根据value值计算百分比
+
+                        textStyle: {
+                            align: 'center',
+                            baseline: 'middle',
+                            fontFamily: '微软雅黑',
+                            fontSize: 15,
+                            fontWeight: 'bolder'
+                        }
+
+                    },
+                },
+                data: [
+                    {value: 1840, name: '打了疫苗'},
+                    {value: 100, name: '没打疫苗'},
+
+                ]
+            }
+        ]
+    };
+    ;
+    if (option && typeof option === "object") {
+        myChart.setOption(option, true);
+    }
+
+    /*#################    务工人员工种统计  #####################*/
+
+    var dom = document.getElementById("gztj");
+    var myChart = echarts.init(dom);
+    var app = {};
+    option = null;
+    app.title = '环形图';
+
+    option = {
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b}: {c} ({d}%)"
+        },
+        legend: {
+            orient: 'vertical',
+            x: 'left',
+            data: ['{{ dog_salesLocation_list.0 }}', '{{ dog_salesLocation_list.1 }}', '{{ dog_salesLocation_list.2 }}', '{{ dog_salesLocation_list.3 }}', '{{ dog_salesLocation_list.4 }}'],
+            textStyle: {
+                color: '#fff',
+            },
+        },
+        series: [
+            {
+                name: '访问来源',
+                type: 'pie',
+                radius: ['50%', '70%'],
+                avoidLabelOverlap: false,
+                label: {
+                    normal: {
+                        show: false,
+                        textStyle: {
+                            align: 'center',
+                            baseline: 'middle',
+                            fontFamily: '微软雅黑',
+                            fontSize: 12,
+                            fontWeight: 'normal'
+                        }
+
+                    },
+                    emphasis: {
+                        show: true,
+                        textStyle: {
+                            fontSize: '12',
+                            fontWeight: 'bold'
+                        }
+                    }
+                },
+                labelLine: {
+                    normal: {
+                        show: false
+                    }
+                },
+                data: [
+                    {value: {{ dog_salesLocation_list_data.0 }}, name: '{{ dog_salesLocation_list.0 }}'},
+                    {value: {{ dog_salesLocation_list_data.1 }}, name: '{{ dog_salesLocation_list.1 }}'},
+                    {value: {{ dog_salesLocation_list_data.2 }}, name: '{{ dog_salesLocation_list.2 }}'},
+                    {value: {{ dog_salesLocation_list_data.3 }}, name: '{{ dog_salesLocation_list.3 }}'},
+                    {value: {{ dog_salesLocation_list_data.4 }}, name: '{{ dog_salesLocation_list.4 }}'}
+                ]
+            }
+        ]
+    };
+    ;
+    if (option && typeof option === "object") {
+        myChart.setOption(option, true);
+    }
+
+    /*#################    各公司现场人员统计  #####################*/
+
+    var dom = document.getElementById("xcrytj");
+    var myChart = echarts.init(dom);
+    var app = {};
+    option = null;
+    app.title = '环形图';
+
+    option = {
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b}: {c} ({d}%)"
+        },
+        legend: {
+            orient: 'vertical',
+            x: 'left',
+            data: ['{{ dog_breed_dict.dog_breed.0 }}', '{{ dog_breed_dict.dog_breed.1 }}', '{{ dog_breed_dict.dog_breed.2 }}', '{{ dog_breed_dict.dog_breed.3 }}', '{{ dog_breed_dict.dog_breed.4 }}'],
+            textStyle: {
+                color: '#fff',
+            },
+        },
+        series: [
+            {
+                name: '访问来源',
+                type: 'pie',
+                radius: ['50%', '70%'],
+                avoidLabelOverlap: false,
+                label: {
+                    normal: {
+                        show: false,
+                        textStyle: {
+                            align: 'center',
+                            baseline: 'middle',
+                            fontFamily: '微软雅黑',
+                            fontSize: 12,
+                            fontWeight: 'normal'
+                        }
+
+                    },
+                    emphasis: {
+                        show: true,
+                        textStyle: {
+                            fontSize: '12',
+                            fontWeight: 'bold'
+                        }
+                    }
+                },
+                labelLine: {
+                    normal: {
+                        show: false
+                    }
+                },
+                data: [
+                    {value: {{ dog_breed_dict.count.0 }}, name: '{{ dog_breed_dict.dog_breed.0 }}'},
+                    {value: {{ dog_breed_dict.count.1 }}, name: '{{ dog_breed_dict.dog_breed.1 }}'},
+                    {value: {{ dog_breed_dict.count.2 }}, name: '{{ dog_breed_dict.dog_breed.2 }}'},
+                    {value: {{ dog_breed_dict.count.3 }}, name: '{{ dog_breed_dict.dog_breed.3 }}'},
+                    {value: {{ dog_breed_dict.count.4 }}, name: '{{ dog_breed_dict.dog_breed.4 }}'}
+                ]
+            }
+        ]
+    };
+    ;
+    if (option && typeof option === "object") {
+        myChart.setOption(option, true);
+    }
+    /*##################  巡检风险状态     ##################*/
+    var option = {
+        tooltip: {
+            trigger: 'axis'
+        },
+        legend: {
+            data: ['年龄分布柱形图', '年龄分布折线图'],
+            textStyle: {
+                color: '#fff',
+            },
+        },
+        xAxis: [
+            {
+                type: 'category',
+                data: ['{{ dog_age_data_list.0 }}', '{{ dog_age_data_list.1 }}', '{{ dog_age_data_list.2 }}', '{{ dog_age_data_list.3 }}'],
+                axisLabel: {
+                    show: true,
+                    textStyle: {
+                        color: '#657c97'
+                    }
+                }
+            }
+        ],
+        yAxis: [
+            {
+                type: 'value',
+                name: '年龄分布折线图',
+                nameTextStyle: {
+                    color: "#657c97",
+
+                },
+                min: 0,
+                max: 1500,
+                interval: 500,
+                axisLabel: {
+
+                    textStyle: {
+                        color: '#657c97'
+                    }
+                }
+            }
+        ],
+        series: [
+
+            {
+                name: '年龄分布柱形图',
+                type: 'bar',
+
+                /*设置柱状图颜色*/
+                itemStyle: {
+                    normal: {
+                        color: new echarts.graphic.LinearGradient(
+                            0, 0, 0, 1,
+                            [
+                                {offset: 0, color: '#83bff6'},
+                                {offset: 0.5, color: '#0ff'},
+                                {offset: 1, color: '#188df0'}
+                            ]
+                        ),
+                        /*信息显示方式*/
+                        label: {
+                            show: false,
+                            position: 'top',
+                            formatter: '{b}\n{c}'
+                        }
+                    }
+                },
+                data: [{{ dog_age_data_list_data.0 }}, {{ dog_age_data_list_data.1 }}, {{ dog_age_data_list_data.2 }}, {{ dog_age_data_list_data.3 }}]
+            },
+            {
+                name: '年龄分布折线图',
+                type: 'line',
+                itemStyle: {  /*设置折线颜色*/
+                    normal: {
+                        //color:'#0ff'
+                    }
+                },
+                data: [{{ dog_age_data_list_data.0 }}, {{ dog_age_data_list_data.1 }}, {{ dog_age_data_list_data.2 }}, {{ dog_age_data_list_data.3 }}]
+            }
+        ]
+    };
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('xjfxzt'));
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+
+
+
+    var dom = document.getElementById("fxbhqs");
+    var myChart = echarts.init(dom);
+    var app = {};
+    option = null;
+    option = {
+        title: {
+            text: '风险变化趋势',
+            //是否显示标题组件
+            show: false
+        },
+        tooltip: {
+            trigger: 'axis'
+        },
+        legend: {
+            data: ['{{ dog_breed_dict.dog_breed.0 }}', '{{ dog_breed_dict.dog_breed.1 }}', '{{ dog_breed_dict.dog_breed.2 }}', '{{ dog_breed_dict.dog_breed.3 }}'],
+            top: "3%",
+            textStyle: {
+                color: '#fff',
+            },
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        toolbox: {
+            feature: {
+                saveAsImage: {}
+            }
+        },
+        xAxis: {
+            type: 'category',
+            boundaryGap: false,
+            data: ['最低价格', '最高价格', '平均价格', '中位数', '数据大小'],
+            axisLabel: {
+                show: true,
+                textStyle: {
+                    color: '#657c97'
+                }
+            }
+        },
+        yAxis: {
+            type: 'value',
+            axisLabel: {
+                show: true,
+                textStyle: {
+                    color: '#657c97'
+                }
+            }
+        },
+        series: [
+            {
+                name: '{{ dog_breed_dict.dog_breed.0 }}',
+                type: 'line',
+
+                stack: '总量',
+                data: [{{ dog_data_min_list.0 }}, {{ dog_data_max_list.0 }}, {{ dog_data_mean_list.0 }}, {{ dog_data_median_list.0 }}, {{ dog_data_size_list.0 }}],
+                // 显示数值
+                itemStyle: {normal: {label: {show: true}}}
+            },
+            {
+                name: '{{ dog_breed_dict.dog_breed.1 }}',
+                type: 'line',
+                stack: '总量',
+                data: [{{ dog_data_min_list.1 }}, {{ dog_data_max_list.1 }}, {{ dog_data_mean_list.1 }}, {{ dog_data_median_list.1 }}, {{ dog_data_size_list.1 }}],
+                // 显示数值
+                itemStyle: {normal: {label: {show: true}}}
+            },
+            {
+                name: '{{ dog_breed_dict.dog_breed.2 }}',
+                type: 'line',
+                stack: '总量',
+                data: [{{ dog_data_min_list.2 }}, {{ dog_data_max_list.2 }}, {{ dog_data_mean_list.2 }}, {{ dog_data_median_list.2 }}, {{ dog_data_size_list.2 }}],
+                // 显示数值
+                itemStyle: {normal: {label: {show: true}}}
+            },
+            {
+                name: '{{ dog_breed_dict.dog_breed.3 }}',
+                type: 'line',
+                stack: '总量',
+                data: [{{ dog_data_min_list.3 }}, {{ dog_data_max_list.3 }}, {{ dog_data_mean_list.3 }}, {{ dog_data_median_list.3 }}, {{ dog_data_size_list.3 }}],
+                // 显示数值
+                itemStyle: {normal: {label: {show: true}}}
+            }
+
+        ]
+    };
+    ;
+    if (option && typeof option === "object") {
+        myChart.setOption(option, true);
+    }
+
+
+    {#/*################### 问题等级    ###################*/#}
+    {#var dom = document.getElementById("wentidj");#}
+    {#var myChart = echarts.init(dom);#}
+    {#var app = {};#}
+    {#option = null;#}
+    {#option = {#}
+    {#    tooltip: {#}
+    {#        trigger: 'item',#}
+    {#        formatter: "{a} <br/>{b}: {c} ({d}%)"#}
+    {#    },#}
+    {#    legend: {#}
+    {#        orient: 'vertical',#}
+    {#        x: 'left',#}
+    {#        data: []#}
+    {#    },#}
+    {#    series: [#}
+    {#        {#}
+    {#            name: '问题类别',#}
+    {#            type: 'pie',#}
+    {#            radius: ['50%', '70%'],#}
+    {#            avoidLabelOverlap: false,#}
+    {#            label: {#}
+    {#                normal: {#}
+    {#                    show: true,#}
+    {#                    position: 'inside',#}
+    {#                    formatter: '{d}%',//模板变量有 {a}、{b}、{c}、{d}，分别表示系列名，数据名，数据值，百分比。{d}数据会根据value值计算百分比#}
+    {#                },#}
+    {#                emphasis: {#}
+    {#                    show: true,#}
+    {#                }#}
+    {#            },#}
+    {#            labelLine: {#}
+    {#                normal: {#}
+    {#                    show: true,#}
+    {#                    position: 'inside',  //让文字显示在柱子上#}
+    {#                    formatter: '{d}%',//模板变量有 {a}、{b}、{c}、{d}，分别表示系列名，数据名，数据值，百分比。{d}数据会根据value值计算百分比#}
+    {#                },#}
+    {#            },#}
+    {#            data: [#}
+    {#                {value: 335, name: '{{ dog_breed_dict.dog_breed.2 }}'},#}
+    {#                {value: 310, name: '{{ dog_breed_dict.dog_breed.1 }}'},#}
+    {##}
+    {#            ]#}
+    {#        }#}
+    {#    ]#}
+    {#};#}
+    {#;#}
+    {#if (option && typeof option === "object") {#}
+    {#    myChart.setOption(option, true);#}
+    {#}#}
+</script>
+
+
+<script>
+    $(function () {
+        //分类选择
+        $(".xmgl_heard li").click(function () {
+
+            $(this).attr("class", "");
+            $(this).siblings().attr("class", "hove");
+            $("#xmgl_cen").find(".xmgl_tb").eq($(this).index()).removeClass("none").siblings().addClass("none")
+        });
+    })
+</script>
+
+</html>
