@@ -24,7 +24,7 @@ SECRET_KEY = 'sgxe*3+pgzq8ty*8%(0a1*gjkc$duno!9973isk0+a6$xw1s2l'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['123.56.16.209'] 
 
 # Application definition
 
@@ -78,8 +78,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',  # 数据库引擎
         'NAME': 'mgw_django',  # 数据库名
         'USER': 'root',  # 账号
-        'PASSWORD': '1334',  # 密码
-        'HOST': '127.0.0.1',  # HOST
+        'PASSWORD': 'root',  # 密码
+        'HOST': '123.56.16.209',  # HOST
         'POST': 3306,  # 端口
 
     }
